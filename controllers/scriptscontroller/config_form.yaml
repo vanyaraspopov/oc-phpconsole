@@ -1,4 +1,4 @@
-name: ScriptsController
+name: 'rv.phpconsole::lang.controllers.scripts'
 form: $/rv/phpconsole/models/script/fields.yaml
 modelClass: RV\PhpConsole\Models\Script
 defaultRedirect: rv/phpconsole/scriptscontroller

@@ -1,6 +1,6 @@
 list: $/rv/phpconsole/models/script/columns.yaml
 modelClass: RV\PhpConsole\Models\Script
-title: ScriptsController
+title: 'rv.phpconsole::lang.controllers.scripts'
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true

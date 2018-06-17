@@ -6,7 +6,10 @@ use Input;
 
 class ScriptsController extends Controller
 {
-    public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
+    public $implement = [
+        'Backend\Behaviors\ListController',
+        'Backend\Behaviors\FormController'
+    ];
     
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
@@ -19,6 +22,8 @@ class ScriptsController extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('RV.PhpConsole', 'rv-phpconsole-menu');
+
+        $this->addCss('/plugins/rv/phpconsole/assets/css/style.css');
     }
 
     public function onExecute()
@@ -31,6 +36,6 @@ class ScriptsController extends Controller
         eval($code);
         $output = ob_get_clean();
 
-        $this->vars['output'] = nl2br($output);
+        $this->vars['output'] = $output;
     }
 }

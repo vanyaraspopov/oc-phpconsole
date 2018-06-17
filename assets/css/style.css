@@ -1,0 +1,11 @@
+#phpConsole_output {
+    display: block;
+    width: 100%;
+    min-height: 250px;
+    border: 2px dashed grey;
+    padding: 5px;
+}
+
+#phpConsole_outputWrapper {
+    padding-bottom: 20px;
+}
