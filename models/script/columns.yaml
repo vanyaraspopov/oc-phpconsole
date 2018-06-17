@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: Название
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Описание
+        type: text
+        searchable: false

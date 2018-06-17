@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Название
+        span: auto
+        type: text
+    description:
+        label: Описание
+        size: small
+        span: auto
+        type: textarea
+    code:
+        label: Скрипт
+        span: full
+        size: giant
+        language: php
+        type: codeeditor

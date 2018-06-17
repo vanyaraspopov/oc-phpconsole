@@ -1,0 +1,10 @@
+name: ScriptsController
+form: $/rv/phpconsole/models/script/fields.yaml
+modelClass: RV\PhpConsole\Models\Script
+defaultRedirect: rv/phpconsole/scriptscontroller
+create:
+    redirect: 'rv/phpconsole/scriptscontroller/update/:id'
+    redirectClose: rv/phpconsole/scriptscontroller
+update:
+    redirect: rv/phpconsole/scriptscontroller
+    redirectClose: rv/phpconsole/scriptscontroller

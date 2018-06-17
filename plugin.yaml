@@ -1,0 +1,15 @@
+plugin:
+    name: 'rv.phpconsole::lang.plugin.name'
+    description: 'rv.phpconsole::lang.plugin.description'
+    author: RV
+    icon: oc-icon-terminal
+    homepage: ''
+navigation:
+    rv-phpconsole-menu:
+        label: 'rv.phpconsole::lang.plugin.name'
+        url: rv/phpconsole/scriptscontroller
+        icon: icon-terminal
+permissions:
+    rv-phpconsole-usage:
+        tab: 'rv.phpconsole::lang.permissions.usage'
+        label: 'rv.phpconsole::lang.permissions.usage'
