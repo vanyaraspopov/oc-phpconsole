@@ -4,11 +4,11 @@
 
 columns:
     title:
-        label: Название
+        label: 'rv.phpconsole::lang.models.script.title'
         type: text
         searchable: true
         sortable: true
     description:
-        label: Описание
+        label: 'rv.phpconsole::lang.models.script.description'
         type: text
         searchable: false

@@ -4,16 +4,16 @@
 
 fields:
     title:
-        label: Название
+        label: 'rv.phpconsole::lang.models.script.title'
         span: auto
         type: text
     description:
-        label: Описание
+        label: 'rv.phpconsole::lang.models.script.description'
         size: small
         span: auto
         type: textarea
     code:
-        label: Скрипт
+        label: 'rv.phpconsole::lang.models.script.code'
         span: full
         size: giant
         language: php

@@ -10,6 +10,13 @@
         'execute' => 'Выполнить',
         'execution' => 'Выполнение',
         'output' => 'Вывод',
-        'scripts' => 'Скрипты'
+        'scripts' => 'Скрипты',
+    ],
+    'models' => [
+        'script' => [
+            'title' => 'Название',
+            'description' => 'Описание',
+            'code' => 'Скрипт',
+        ]
     ]
 ];

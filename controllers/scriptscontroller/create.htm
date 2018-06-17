@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('rv/phpconsole/scriptscontroller') ?>">ScriptsController</a></li>
+        <li><a href="<?= Backend::url('rv/phpconsole/scriptscontroller') ?>"><?= e(trans('rv.phpconsole::lang.controllers.scripts')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -17,31 +17,26 @@
             <div class="loading-indicator-container">
                 <button
                     type="submit"
-                    data-request="onExecute"
-                    data-request-data="redirect:0"
-                    data-request-update="output: '#phpConsole_output'"
-                    data-hotkey="ctrl+e, cmd+e"
-                    data-load-indicator="<?= e(trans('rv.phpconsole::lang.controllers.execution')) ?>"
-                    class="btn btn-primary">
-                    Выполнить
-                </button>
-            </div>
-        </div>
-
-        <div class="layout-row">
-            <p>Вывод</p>
-            <code id="phpConsole_output"></code>
-        </div>
-
-        <div class="form-buttons">
-            <div class="loading-indicator-container">
-                <button
-                    type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-primary">
                     <?= e(trans('backend::lang.form.create')) ?>
+                </button>
+                <button
+                    type="submit"
+                    data-request="onExecute"
+                    data-request-data="redirect:0"
+                    data-request-success="
+                        $('#phpConsole_outputWrapper').show()
+                        $('html, body').animate({
+                            scrollTop: ($('#phpConsole_outputWrapper').offset().top)
+                        },500);"
+                    data-request-update="output: '#phpConsole_output'"
+                    data-hotkey="ctrl+e, cmd+e"
+                    data-load-indicator="<?= e(trans('rv.phpconsole::lang.controllers.execution')) ?>"
+                    class="oc-icon-play btn btn-success">
+                    <?= e(trans('rv.phpconsole::lang.controllers.execute')) ?>
                 </button>
                 <button 
                     type="button"
@@ -56,6 +51,11 @@
                     <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('rv/phpconsole/scriptscontroller') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>
             </div>
+        </div>
+
+        <div id="phpConsole_outputWrapper" style="display:none;">
+            <p><?= e(trans('rv.phpconsole::lang.controllers.output')) ?></p>
+            <pre id="phpConsole_output"></pre>
         </div>
 
     <?= Form::close() ?>
