@@ -10,12 +10,12 @@ class ScriptsController extends Controller
         'Backend\Behaviors\ListController',
         'Backend\Behaviors\FormController'
     ];
-    
+
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'rv-phpconsole-usage' 
+        'rv-phpconsole-usage'
     ];
 
     public function __construct()
@@ -31,11 +31,14 @@ class ScriptsController extends Controller
         $data = Input::all();
         $code = $data['Script']['code'];
         $code = preg_replace('/^ *(<\?php|<\?)/mi', '', $code);
+        $output = $this->execute($code);
+        $this->vars['output'] = $output;
+    }
 
+    protected function execute($code)
+    {
         ob_start();
         eval($code);
-        $output = ob_get_clean();
-
-        $this->vars['output'] = $output;
+        return ob_get_clean();
     }
 }
