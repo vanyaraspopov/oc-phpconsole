@@ -1,10 +1,10 @@
 <?php return [
     'plugin' => [
-        'name' => 'PHP Console',
-        'description' => 'PHP консоль для October CMS',
+        'name' => 'PHP Sandbox',
+        'description' => 'PHP песочница для October CMS',
     ],
     'permissions' => [
-        'usage' => 'Использование консоли',
+        'usage' => 'Использование PHP песочницы',
     ],
     'controllers' => [
         'execute' => 'Выполнить',

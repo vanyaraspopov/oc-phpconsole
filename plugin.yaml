@@ -9,6 +9,7 @@ navigation:
         label: 'rv.phpconsole::lang.plugin.name'
         url: rv/phpconsole/scriptscontroller
         icon: icon-terminal
+        iconSvg: 'plugins/rv/phpconsole/assets/images/php-file.svg'
 permissions:
     rv-phpconsole-usage:
         tab: 'rv.phpconsole::lang.permissions.usage'
